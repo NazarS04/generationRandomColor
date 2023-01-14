@@ -1,0 +1,60 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.main__box {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.main__title {
+  text-shadow: 0 1px 3px white;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.main__button {
+  cursor: pointer;
+  font-size: 32px;
+  background-color: inherit;
+}
+.main__button:focus {
+  outline: none;
+}
+.main__massage {
+  background-color: black;
+  color: white;
+  letter-spacing: 2px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 60px;
+  left: -210px;
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  box-shadow: 0 0 10px black;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.fa-solid {
+  text-shadow: 0 0 3px white;
+  font-size: inherit;
+}
+
+/*# sourceMappingURL=main.css.map */
