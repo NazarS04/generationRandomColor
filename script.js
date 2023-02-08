@@ -7,9 +7,8 @@ let massage = document.querySelector(".main__massage");
 
 addRandomColorForBox();
 
-document.body.addEventListener("keyup", function (event){
-    if(event.code === "Space")
-    {
+document.body.addEventListener("keyup", function (event) {
+    if (event.code === "Space") {
         addRandomColorForBox();
     }
 });
@@ -72,11 +71,10 @@ function copyColor(event) {
 
         const elemPos = elem.getBoundingClientRect();
         navigator.clipboard.writeText(elem.textContent).then(() => {
-            if(massage.querySelector("h3").textContent === "All color copied")
-            {
+            if (massage.querySelector("h3").textContent === "All color copied") {
                 massage.querySelector("h3").textContent = "Color copied";
             }
-            massage.style.left = (elemPos.left + (elemPos.width - 200)/2) + "px";
+            massage.style.left = (elemPos.left + (elemPos.width - 200) / 2) + "px";
             massage.style.opacity = "1";
             setTimeout(() => {
                 massage.style.opacity = "0";
@@ -85,24 +83,21 @@ function copyColor(event) {
     }
 }
 
-function copyAllColors(event)
-{
-    if((event.ctrlKey || event.metaKey) && event.code ==="KeyC")
-    {
-        let str ="";
-        for(let i=0;i<boxs.length;i++)
-        {
-            str+=boxs[i].querySelector(".main__title").textContent +" ";
+function copyAllColors(event) {
+    if ((event.ctrlKey || event.metaKey) && event.code === "KeyC") {
+        let str = "";
+        for (let i = 0; i < boxs.length; i++) {
+            str += boxs[i].querySelector(".main__title").textContent + " ";
         }
 
-        navigator.clipboard.writeText(str).then(()=> {
+        navigator.clipboard.writeText(str).then(() => {
             let elem = massage.querySelector("h3");
             elem.textContent = "All color copied";
             massage.style.left = "795.9921875px";
             massage.style.opacity = "1";
-            setTimeout(()=>{
+            setTimeout(() => {
                 massage.style.opacity = "0";
-            },1000)
+            }, 1000)
         })
     }
 }
